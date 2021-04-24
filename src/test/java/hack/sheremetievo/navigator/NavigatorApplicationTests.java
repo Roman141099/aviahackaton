@@ -1,33 +1,44 @@
 package hack.sheremetievo.navigator;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import hack.sheremetievo.navigator.model.Path;
-import hack.sheremetievo.navigator.service.PathService;
+import hack.sheremetievo.navigator.model.Point;
+import hack.sheremetievo.navigator.model.PointsJsonConverter;
+import hack.sheremetievo.navigator.repository.PathRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.transaction.Transactional;
-import java.io.IOException;
 import java.math.BigDecimal;
-import java.sql.SQLException;
-import java.util.Arrays;
+import java.util.List;
 
+import static java.math.BigDecimal.*;
 @SpringBootTest
 class NavigatorApplicationTests {
 
     @Autowired
-    PathService service;
+    PathRepository service;
     @Autowired
     EntityManagerFactory factory;
 
     @Test
     void find() {
-        Path p = service.findById(new Path.PathId(BigDecimal.valueOf(123), BigDecimal.valueOf(132))).get();
-        System.out.println(p);
+        EntityManager em = factory.createEntityManager();
+        em.getTransaction().begin();
+        Path p = new Path();
+        p.setId(new Path.PathId(valueOf(12), valueOf(23)));
+        p.setPoints(List.of(
+                new Point(valueOf(1), valueOf(2), "hello")));
+        em.persist(p);
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    @Test
+    void testJson(){
+        System.out.println(new PointsJsonConverter().convertToDatabaseColumn(List.of(
+                new Point(valueOf(1), valueOf(2), "hello")
+        )));
     }
 }

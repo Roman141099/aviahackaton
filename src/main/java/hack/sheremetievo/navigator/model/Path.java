@@ -6,7 +6,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Clob;
+import java.util.List;
+
 import com.google.gson.*;
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "paths")
@@ -15,26 +18,11 @@ public class Path {
     @EmbeddedId
     private PathId id;
 
-    @Column(name = "path")
-    private JsonElement obj;
-
-    public PathId getId() {
-        return id;
-    }
-
-    public void setId(PathId id) {
-        this.id = id;
-    }
-
-    public JsonElement getObj() {
-        return obj;
-    }
-
-    public void setObj(JsonElement obj) {
-        this.obj = obj;
-    }
+    @Convert(converter = PointsJsonConverter.class)
+    private List<Point> points;
 
     @Embeddable
+    @Data
     public static class PathId implements Serializable {
         @Column(name = "point_a")
         private BigDecimal pointA;
