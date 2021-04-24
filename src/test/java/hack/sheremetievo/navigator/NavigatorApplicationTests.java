@@ -23,19 +23,6 @@ class NavigatorApplicationTests {
     EntityManagerFactory factory;
 
     @Test
-    void find() {
-        EntityManager em = factory.createEntityManager();
-        em.getTransaction().begin();
-        Path p = new Path();
-        p.setId(new Path.PathId(valueOf(12), valueOf(23)));
-        p.setPoints(List.of(
-                new Point(valueOf(1), valueOf(2), "hello")));
-        em.persist(p);
-        em.getTransaction().commit();
-        em.close();
-    }
-
-    @Test
     void testJson(){
         System.out.println(new PointsJsonConverter().convertToDatabaseColumn(List.of(
                 new Point(valueOf(1), valueOf(2), "hello")

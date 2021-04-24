@@ -9,11 +9,8 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 public class Point {
-    @SerializedName("\"x\"")
     private BigDecimal x;
-    @SerializedName("\"y\"")
     private BigDecimal y;
-    @SerializedName("\"type\"")
     private String type;
 
     public Point(BigDecimal x, BigDecimal y, String type) {

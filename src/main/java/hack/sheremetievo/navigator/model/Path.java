@@ -1,5 +1,7 @@
 package hack.sheremetievo.navigator.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,11 +11,14 @@ import java.sql.Clob;
 import java.util.List;
 
 import com.google.gson.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "paths")
-@Data
+@Setter
+@Getter
 public class Path {
     @EmbeddedId
     private PathId id;
@@ -24,17 +29,23 @@ public class Path {
     @Embeddable
     @Data
     public static class PathId implements Serializable {
-        @Column(name = "point_a")
-        private BigDecimal pointA;
-        @Column(name = "point_b")
-        private BigDecimal pointB;
+        @Column(name = "point_a_x")
+        private BigDecimal pointAX;
+        @Column(name = "point_a_y")
+        private BigDecimal pointAY;
+        @Column(name = "point_b_x")
+        private BigDecimal pointBX;
+        @Column(name = "point_b_y")
+        private BigDecimal pointBY;
 
         public PathId() {
         }
 
-        public PathId(BigDecimal pointA, BigDecimal pointB) {
-            this.pointA = pointA;
-            this.pointB = pointB;
+        public PathId(BigDecimal pointAX, BigDecimal pointAY, BigDecimal pointBX, BigDecimal pointBY) {
+            this.pointAX = pointAX;
+            this.pointAY = pointAY;
+            this.pointBX = pointBX;
+            this.pointBY = pointBY;
         }
     }
 }
