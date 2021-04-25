@@ -1,0 +1,391 @@
+div{
+  font-family: Roboto,Arial;
+}
+.move{
+  margin: 7px;
+  width: calc(100% - 24px);
+  padding: 5px;
+  border: 1px solid #000;
+}
+#MapContainer{
+  width: 100%;
+  height: 100%
+}
+#SkaleMap{
+  width: 50px;
+  height: 100px;
+  background-color: #999999;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+}
+#GetDirectoin{
+  padding: 15px 20px;
+  font-size: 20px;
+  display: none;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border: 1px solid #000;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  overflow: auto;
+}
+#SelectPointButton,#SelectNumberFlight{
+  margin: 5px;
+  width: calc(100% - 52px);
+  height: 30px;
+  bottom: 0px;
+  background-color: #bbbbbb;
+  position: absolute;
+}
+#SelectNumberFlight, .selectMove{
+  height: calc(30px - 10px);
+  font-size: 15px;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+#BackToSelectRase{
+  padding: 5px 0px;
+  font-size: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.selectMove{
+  margin-bottom: 0px;
+}
+.nameMove{
+  color: #FFBF3C;
+}
+#SelectNumberFlight:hover, .selectMove:hover, #BackToSelectRase:hover{
+  cursor: pointer;
+  color: #FFBF3C;
+}
+#GetNumberFlight{
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+#InpNumberFlight{
+  margin: 5px;
+  width: calc(100% - 10px);
+  height: 30px;
+  border: 1px solid #000;
+  outline: none;
+}
+#menu{
+  width: 250px;
+  height: 100%;
+  background-color: #999999;
+  border-radius: 5px;
+  position: fixed;
+  left: 5px;
+}
+#bigger, #lover{
+  width: calc(100% - 4px);
+  margin: 3px 2px;
+  height: calc(50% - 4px);
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+#bigger:hover, #lover:hover{
+  cursor: pointer;
+  background-color: #eee;
+}
+.fill-FFAC01 {
+  fill: #ffac01;
+}
+#ControllButtons:hover{
+  cursor: pointer;
+}
+.stroke-FFAC01 {
+  stroke: #ffac01;
+}
+.fill-F45525 {
+  fill: #f45525;
+}
+.stroke-F45525 {
+  stroke: #f45525;
+}
+.fill-44E136 {
+  fill: #44e136;
+}
+.stroke-44E136 {
+  stroke: #44e136;
+}
+.fill-4D55FF {
+  fill: #4d55ff;
+}
+.stroke-4D55FF {
+  stroke: #4d55ff;
+}
+.fill-F2F4F6 {
+  fill: #F2F4F6;
+}
+.fill-red{
+  fill: #FFB215;
+}
+.stroke-F2F4F6 {
+  stroke: #f2f4f6;
+}
+.fill-E4E8EB {
+  fill: #e4e8eb;
+}
+.stroke-E4E8EB {
+  stroke: #e4e8eb;
+}
+.fill-D5DBE0 {
+  fill: #d5dbe0;
+}
+.stroke-D5DBE0 {
+  stroke: #d5dbe0;
+}
+.fill-C0C7CC {
+  fill: #c0c7cc;
+}
+.stroke-C0C7CC {
+  stroke: #c0c7cc;
+}
+.fill-FEFFFF {
+  fill: #feffff;
+}
+.stroke-FEFFFF {
+  stroke: #feffff;
+}
+.fill-C7CCCF {
+  fill: #c7cccf;
+}
+.stroke-C7CCCF {
+  stroke: #c7cccf;
+}
+.fill-E3E9EB {
+  fill: #e3e9eb;
+}
+.stroke-E3E9EB {
+  stroke: #e3e9eb;
+}
+.fill-FBFEFE {
+  fill: #fbfefe;
+}
+.stroke-FBFEFE {
+  stroke: #fbfefe;
+}
+.fill-FDFDFD {
+  fill: #fdfdfd;
+}
+.stroke-FDFDFD {
+  stroke: #fdfdfd;
+}
+.fill-C1C7CC {
+  fill: #c1c7cc;
+}
+.stroke-C1C7CC {
+  stroke: #c1c7cc;
+}
+.fill-CED2D6 {
+  fill: #ced2d6;
+}
+.stroke-CED2D6 {
+  stroke: #ced2d6;
+}
+.fill-D7DADE {
+  fill: #d7dade;
+}
+.stroke-D7DADE {
+  stroke: #d7dade;
+}
+.fill-D2D7DB {
+  fill: #d2d7db;
+}
+.stroke-D2D7DB {
+  stroke: #d2d7db;
+}
+.fill-FF0000 {
+  fill: #f00;
+}
+.stroke-FF0000 {
+  stroke: #f00;
+}
+.fill-FF00FF {
+  fill: #f0f;
+}
+.stroke-FF00FF {
+  stroke: #f0f;
+}
+.fill-FFFFFF {
+  fill: #fff;
+}
+.stroke-FFFFFF {
+  stroke: #fff;
+}
+.fill-F7F9FA {
+  fill: #f7f9fa;
+}
+.stroke-F7F9FA {
+  stroke: #f7f9fa;
+}
+.fill-000000 {
+  fill: #000;
+}
+.stroke-000000 {
+  stroke: #000;
+}
+.blackmap .fill-FFAC01 {
+  fill: #ffac00;
+}
+.blackmap .stroke-FFAC01 {
+  stroke: #ffac00;
+}
+.blackmap .fill-F45525 {
+  fill: #f45524;
+}
+.blackmap .stroke-F45525 {
+  stroke: #f45524;
+}
+.blackmap .fill-44E136 {
+  fill: #44e135;
+}
+.blackmap .stroke-44E136 {
+  stroke: #44e135;
+}
+.blackmap .fill-4D55FF {
+  fill: #4b55ff;
+}
+.blackmap .stroke-4D55FF {
+  stroke: #4b55ff;
+}
+.blackmap .fill-F2F4F6 {
+  fill: #232329;
+}
+.blackmap .stroke-F2F4F6 {
+  stroke: #232329;
+}
+.blackmap .fill-E4E8EB {
+  fill: #1b1b1f;
+}
+.blackmap .stroke-E4E8EB {
+  stroke: #1b1b1f;
+}
+.blackmap .fill-D5DBE0 {
+  fill: #444548;
+}
+.blackmap .stroke-D5DBE0 {
+  stroke: #444548;
+}
+.blackmap .fill-C0C7CC {
+  fill: #ccc;
+}
+.blackmap .stroke-C0C7CC {
+  stroke: #ccc;
+}
+.blackmap .fill-FEFFFF {
+  fill: #fefefe;
+}
+.blackmap .stroke-FEFFFF {
+  stroke: #fefefe;
+}
+.blackmap .fill-C7CCCF {
+  fill: #323236;
+}
+.blackmap .stroke-C7CCCF {
+  stroke: #323236;
+}
+.blackmap .fill-E3E9EB {
+  fill: #838387;
+}
+.blackmap .stroke-E3E9EB {
+  stroke: #838387;
+}
+.blackmap .fill-FBFEFE {
+  fill: #85858b;
+}
+.blackmap .stroke-FBFEFE {
+  stroke: #85858b;
+}
+.blackmap .fill-FDFDFD {
+  fill: #dedee6;
+}
+.blackmap .stroke-FDFDFD {
+  stroke: #dedee6;
+}
+.blackmap .fill-C1C7CC {
+  fill: #5f6266;
+}
+.blackmap .stroke-C1C7CC {
+  stroke: #5f6266;
+}
+.blackmap .fill-CED2D6 {
+  fill: #525357;
+}
+.blackmap .stroke-CED2D6 {
+  stroke: #525357;
+}
+.blackmap .fill-D7DADE {
+  fill: #343338;
+}
+.blackmap .stroke-D7DADE {
+  stroke: #343338;
+}
+.blackmap .fill-D2D7DB {
+  fill: #37373b;
+}
+.blackmap .stroke-D2D7DB {
+  stroke: #37373b;
+}
+.blackmap .fill-FF0000 {
+  fill: #fa0000;
+}
+.blackmap .stroke-FF0000 {
+  stroke: #fa0000;
+}
+.blackmap .fill-FF00FF {
+  fill: #fa00fa;
+}
+.blackmap .stroke-FF00FF {
+  stroke: #fa00fa;
+}
+.blackmap .fill-FFFFFF {
+  fill: #000;
+}
+.blackmap .stroke-FFFFFF {
+  stroke: #000;
+}
+.blackmap .fill-F7F9FA {
+  fill: #151517;
+}
+.blackmap .stroke-F7F9FA {
+  stroke: #151517;
+}
+.blackmap .fill-000000 {
+  fill: #feffff;
+}
+.blackmap .stroke-000000 {
+  stroke: #feffff;
+}
+.fill-NONE {
+  fill: none;
+}
+.stroke-NONE {
+  stroke: none;
+}
+.fill-TRANSPARENT {
+  fill: transparent;
+}
+.stroke-TRANSPARENT {
+  stroke: transparent;
+}
