@@ -11,11 +11,9 @@ import java.math.BigDecimal;
 public class Point {
     private BigDecimal x;
     private BigDecimal y;
-    private String type;
 
-    public Point(BigDecimal x, BigDecimal y, String type) {
+    public Point(BigDecimal x, BigDecimal y) {
         this.x = x;
         this.y = y;
-        this.type = type;
     }
 }

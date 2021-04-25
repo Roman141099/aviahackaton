@@ -6,7 +6,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Repository
 @Transactional(isolation = Isolation.READ_COMMITTED)
-public interface PathRepository extends JpaRepository<Path, Path.PathId> {
+public interface PathRepository extends JpaRepository<Path, Integer> {
+    Optional<Path> findPathByInitialPoints(Path.InitialPoints points);
 }

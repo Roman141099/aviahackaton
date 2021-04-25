@@ -20,8 +20,8 @@ public class PathController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getPath(@RequestBody Path.PathId points){
-        return ResponseEntity.ok(service.findById(points).orElseThrow(()
+    public ResponseEntity<?> getPath(@RequestBody Path.InitialPoints points){
+        return ResponseEntity.ok(service.findPathByInitialPoints(points).orElseThrow(()
                 -> new PathNotFoundException("Path not found")));
     }
 

@@ -24,8 +24,6 @@ class NavigatorApplicationTests {
 
     @Test
     void testJson(){
-        System.out.println(new PointsJsonConverter().convertToDatabaseColumn(List.of(
-                new Point(valueOf(1), valueOf(2), "hello")
-        )));
+        System.out.println(service.findPathByInitialPoints(new Path.InitialPoints()));
     }
 }
